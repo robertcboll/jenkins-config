@@ -17,6 +17,10 @@ job {
     }
   }
 
+  triggers {
+    scm '' // allow triggers
+  }
+
   steps {
     shell './plugins/install.sh'
   }
