@@ -18,6 +18,6 @@ job {
   }
 
   steps {
-    shell './scripts/install-plugins.sh'
+    shell './plugins/install.sh'
   }
 }
