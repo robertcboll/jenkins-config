@@ -4,3 +4,6 @@ BASEDIR=$(dirname $0)
 
 $BASEDIR/bin/batch-install-jenkins-plugins.sh -p $BASEDIR/plugins.list -d $JENKINS_HOME/plugins
 
+echo "**********************************"
+echo "RESTART REQUIRED - RESTART JENKINS"
+echo "**********************************"
