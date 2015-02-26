@@ -1,4 +1,4 @@
-def git_url   = 'git@github.com:robertcboll/jenkins-configs'
+def git_url   = 'robertcboll/jenkins-configs'
 def git_creds = 'jenkins'
 
 job {
@@ -8,7 +8,7 @@ job {
   scm {
     git {
       remote {
-        url git_url
+        github git_url
 
         credentials git_creds
       }
