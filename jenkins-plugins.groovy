@@ -2,7 +2,7 @@ def git_url   = 'git@github.com:robertcboll/jenkins-configs'
 def git_creds = 'jenkins'
 
 job {
-  name 'jenkins-plugins'
+  name 'jenkins/jenkins-plugins'
   description 'script install of jenkins plugins'
 
   scm {

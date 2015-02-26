@@ -1,5 +1,5 @@
 job {
-  name 'dotjenkins-git-init'
+  name 'jenkins/init-dotjenkins-git'
   description 'initialize jobs for a .jenkins repo'
 
   parameters {
