@@ -1,5 +1,5 @@
 job {
-  name 'jenkins/init-dotjenkins-git'
+  name 'jenkins/dotjenkins-init'
   description 'initialize jobs for a .jenkins repo'
 
   parameters {
@@ -11,8 +11,7 @@ job {
   scm {
     git {
       remote {
-        url '${git_url}'
-        
+        url '${git_url}'       
         credentials '${git_creds}'
       }
 

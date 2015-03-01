@@ -1,9 +1,14 @@
 #! /bin/bash
-set -x
-BASEDIR=$(dirname $0)
+set -o pipefail
 
-$BASEDIR/bin/batch-install-jenkins-plugins.sh -p $BASEDIR/plugins.list -d $JENKINS_HOME/plugins
+# usage $0 jenkins_url
 
-echo "**********************************"
-echo "RESTART REQUIRED - RESTART JENKINS"
-echo "**********************************"
+URL=$1
+CLI=/tmp/jenkins-cli.jar
+
+PLUGIN_FILE=plugins.list
+PLUGINS=`cat $PLUGIN_FILE | sed ':a;N;$!ba;s/\n/ /g'`
+
+curl $URL/jnlpJars/jenkins-cli.jar > $CLI
+
+java -jar $CLI -s $URL install-plugin $PLUGINS -restart

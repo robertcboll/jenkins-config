@@ -1,16 +1,13 @@
 def git_url   = 'robertcboll/jenkins-configs'
-def git_creds = 'jenkins'
 
 job {
-  name 'jenkins/jenkins-plugins'
+  name 'jenkins/install-plugins'
   description 'script install of jenkins plugins'
 
   scm {
     git {
       remote {
-        github git_url
-
-        credentials git_creds
+        github 'robertcboll/jenkins-config'
       }
 
       branch 'master'
@@ -18,10 +15,12 @@ job {
   }
 
   triggers {
-    scm '' // allow triggers
+    githubPush() 
   }
 
   steps {
-    shell './plugins/install.sh'
+    shell './plugins/install.sh ${JENKINS_URL}'
   }
 }
+
+queue 'jenkins/install-plugins'
