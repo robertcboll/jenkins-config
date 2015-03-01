@@ -4,9 +4,10 @@ set -o pipefail
 # usage $0 jenkins_url
 
 URL=$1
-CLI=/tmp/jenkins-cli.jar
-
 DIR=$(dirname $0)
+
+CLI=$DIR/tmp/jenkins-cli.jar
+
 PLUGIN_FILE=$DIR/plugins.list
 PLUGINS=`cat $PLUGIN_FILE | sed ':a;N;$!ba;s/\n/ /g'`
 
