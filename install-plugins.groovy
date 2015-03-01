@@ -31,4 +31,4 @@ job {
   }
 }
 
-queue 'jenkins/install-plugins'
+queue '_jenkins/install-plugins'
