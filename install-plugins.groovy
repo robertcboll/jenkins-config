@@ -24,7 +24,7 @@ job {
           shell 'if [ ${BUILD_NUMBER} -eq 1 ]; then exit 0; else exit 1; fi'
         }
       }
-      runner("Run")
+      runner("Unstable")
 
       shell './plugins/install.sh ${JENKINS_URL}'
     }
