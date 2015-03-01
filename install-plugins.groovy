@@ -18,7 +18,11 @@ job {
   steps {
     conditionalSteps {
       condition {
-        shell 'git show --pretty="format:" --name-only | grep "plugins.list"'
+        or {
+          shell 'git show --pretty="format:" --name-only | grep "plugins.list"'
+        } {
+          shell '${BUILD_NUMBER} == 0'
+        }
       }
       runner("Run")
 
