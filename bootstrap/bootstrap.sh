@@ -7,7 +7,7 @@ URL=$1
 CLI=/tmp/jenkins-cli.jar
 
 DIR=$(dirname $0)
-PLUGINS='job-dsl github cloudbees-folder'
+PLUGINS='job-dsl github cloudbees-folder conditional-buildstep'
 
 echo "downloading jenkins-cli"
 curl --silent $URL/jnlpJars/jenkins-cli.jar > $CLI
