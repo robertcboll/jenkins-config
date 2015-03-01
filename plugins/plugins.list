@@ -1,6 +1,7 @@
 job-dsl
 git
 github
+github-oauth
 gradle
 checkstyle
 jacoco
