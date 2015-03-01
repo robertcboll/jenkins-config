@@ -22,7 +22,7 @@ java -jar $CLI -s $URL install-plugin $PLUGINS 2>/dev/null
 java -jar $CLI -s $URL safe-restart 2>/dev/null
 
 echo "waiting for jenkins restart"
-sleep 10 # wait 30 seconds for shutdown, before we start polling
+sleep 30 # wait 30 seconds for shutdown, before we start polling
 until java -jar $CLI -s $URL wait-node-online "">/dev/null 2>&1; do
   echo "waiting..." && sleep 5
 done
