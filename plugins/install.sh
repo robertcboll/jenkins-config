@@ -13,4 +13,5 @@ PLUGINS=`cat $PLUGIN_FILE | sed ':a;N;$!ba;s/\n/ /g'`
 echo "downloading jenkins-cli"
 curl --silent $URL/jnlpJars/jenkins-cli.jar > $CLI
 
+echo "installing plugins"
 java -jar $CLI -s $URL install-plugin $PLUGINS -restart >/dev/null 2>&1
