@@ -1,5 +1,3 @@
-def git_url   = 'robertcboll/jenkins-configs'
-
 job {
   name 'jenkins/install-plugins'
   description 'script install of jenkins plugins'
