@@ -21,7 +21,7 @@ job {
         or {
           shell 'git show --pretty="format:" --name-only | grep "plugins.list"'
         } {
-          shell '${BUILD_NUMBER} == 0'
+          shell 'if [ ${BUILD_NUMBER} -eq 1 ]; then exit 0; else exit 1; fi'
         }
       }
       runner("Run")
