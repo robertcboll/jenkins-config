@@ -1,5 +1,5 @@
 job {
-  name 'jenkins/install-plugins'
+  name '_jenkins/install-plugins'
   description 'script install of jenkins plugins'
 
   scm {

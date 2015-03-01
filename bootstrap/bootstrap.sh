@@ -28,10 +28,10 @@ until java -jar $CLI -s $URL wait-node-online "">/dev/null 2>&1; do
 done
 
 echo "creating jenkins folder"
-cat $DIR/jobs/jenkins-folder.xml | java -jar $CLI -s $URL create-job 'jenkins' 2>/dev/null
+cat $DIR/jobs/folder.xml | java -jar $CLI -s $URL create-job '_jenkins' 2>/dev/null
 
 echo "creating bootstrap job"
-cat $DIR/jobs/bootstrap.xml | java -jar $CLI -s $URL create-job 'jenkins/bootstrap' 2>/dev/null
+cat $DIR/jobs/bootstrap.xml | java -jar $CLI -s $URL create-job '_jenkins/bootstrap' 2>/dev/null
 
 echo "triggering bootstrap job"
 java -jar $CLI -s $URL build 'jenkins/bootstrap' 2>/dev/null
