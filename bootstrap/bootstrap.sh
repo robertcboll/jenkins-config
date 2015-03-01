@@ -46,5 +46,5 @@ done
 
 if [ ! -z $GITHUB_CLIENT_ID ] && [ ! -z $GITHUB_CLIENT_SECRET ]; then
   echo "configuring github auth"
-  java -jar $CLI -s $URL groovy github-oauth.groovy $GITHUB_CLIENT_ID $GITHUB_CLIENT_SECRET
+  java -jar $CLI -s $URL groovy $DIR/github-oauth.groovy $GITHUB_CLIENT_ID $GITHUB_CLIENT_SECRET
 fi
