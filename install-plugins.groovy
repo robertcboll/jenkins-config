@@ -7,7 +7,6 @@ job {
       remote {
         github 'robertcboll/jenkins-config'
       }
-
       branch 'master'
     }
   }
@@ -17,7 +16,14 @@ job {
   }
 
   steps {
-    shell './plugins/install.sh ${JENKINS_URL}'
+    conditionalSteps {
+      condition {
+        shell 'git show --pretty="format:" --name-only | grep "plugins.list"'
+      }
+      runner("Run")
+
+      shell './plugins/install.sh ${JENKINS_URL}'
+    }
   }
 }
 

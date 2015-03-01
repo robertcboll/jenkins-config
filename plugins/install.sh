@@ -6,9 +6,11 @@ set -o pipefail
 URL=$1
 CLI=/tmp/jenkins-cli.jar
 
-PLUGIN_FILE=plugins.list
+DIR=$(dirname $0)
+PLUGIN_FILE=$DIR/plugins.list
 PLUGINS=`cat $PLUGIN_FILE | sed ':a;N;$!ba;s/\n/ /g'`
 
-curl $URL/jnlpJars/jenkins-cli.jar > $CLI
+echo "downloading jenkins-cli"
+curl --silent $URL/jnlpJars/jenkins-cli.jar > $CLI
 
-java -jar $CLI -s $URL install-plugin $PLUGINS -restart
+java -jar $CLI -s $URL install-plugin $PLUGINS -restart >/dev/null 2>&1

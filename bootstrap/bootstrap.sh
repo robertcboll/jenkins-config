@@ -12,7 +12,8 @@ PLUGINS='job-dsl github cloudbees-folder'
 echo "downloading jenkins-cli"
 curl --silent $URL/jnlpJars/jenkins-cli.jar > $CLI
 
-echo "visit the web ui to trigger update center pull!!"
+echo "opening the web ui to trigger update center pull."
+open "$URL" || 0
 echo "press any key to continue..."
 read
 
