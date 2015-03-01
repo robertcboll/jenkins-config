@@ -34,4 +34,4 @@ echo "creating bootstrap job"
 cat $DIR/jobs/bootstrap.xml | java -jar $CLI -s $URL create-job '_jenkins/bootstrap' 2>/dev/null
 
 echo "triggering bootstrap job"
-java -jar $CLI -s $URL build 'jenkins/bootstrap' 2>/dev/null
+java -jar $CLI -s $URL build '_jenkins/bootstrap' 2>/dev/null
