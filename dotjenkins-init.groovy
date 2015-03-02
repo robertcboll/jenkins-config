@@ -21,7 +21,7 @@ job {
 
   steps {
     dsl {
-      removeAction 'DELETE'
+      removeAction 'IGNORE'
       external '.jenkins/*.groovy'
     }
   }
