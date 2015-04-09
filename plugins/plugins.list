@@ -3,8 +3,8 @@ git
 github
 github-oauth
 gradle
-jacoco
 checkstyle
+jacoco
 cloudbees-folder
 build-pipeline-plugin
 build-name-setter
