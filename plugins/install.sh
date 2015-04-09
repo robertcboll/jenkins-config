@@ -15,4 +15,5 @@ echo "downloading jenkins-cli from ; ${URL}jnlpJars/jenkins-cli.jar"
 curl --silent ${URL}jnlpJars/jenkins-cli.jar > $CLI
 
 echo "installing plugins"
-java -jar $CLI -s $URL install-plugin $PLUGINS -restart 2>/dev/null
+echo "plugins are $PLUGINS"
+java -jar $CLI -s $URL install-plugin $PLUGINS -restart
