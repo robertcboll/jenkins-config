@@ -25,7 +25,7 @@ freeStyleJob('_jenkins/install-plugins') {
       }
       runner("Unstable")
 
-      shell './plugins/install.sh ${JENKINS_URL}'
+      shell './plugins/install.sh "${JENKINS_URL}"'
     }
   }
 }
