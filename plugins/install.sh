@@ -2,6 +2,7 @@
 set -o pipefail
 
 # usage $0 jenkins_url
+# NOTE: jenkins_url won't be populated if it's not set in global jenkins config
 
 URL=${1:-http://localhost:8080}
 DIR=$(dirname $0)
