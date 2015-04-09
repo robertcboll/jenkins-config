@@ -1,4 +1,4 @@
-freestyleJob('_jenkins/install-plugins') {
+freeStyleJob('_jenkins/install-plugins') {
   description 'script install of jenkins plugins'
 
   scm {

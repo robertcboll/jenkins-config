@@ -1,4 +1,4 @@
-freestyleJob('_jenkins/dotjenkins-init') {
+freeStyleJob('_jenkins/dotjenkins-init') {
   description 'initialize jobs for a .jenkins repo'
 
   parameters {
