@@ -23,6 +23,6 @@ token-macro
 slack
 mesos
 jobConfigHistory
-naginator
 https://github.com/robertcboll/dotjenkins-plugin/releases/download/v0.1/dotjenkins.hpi
+naginator
 embeddable-build-status
