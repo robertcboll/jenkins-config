@@ -20,8 +20,8 @@ postbuild-task
 next-build-number
 conditional-buildstep
 token-macro
-slack
 mesos
+slack
 jobConfigHistory
 https://github.com/robertcboll/dotjenkins-plugin/releases/download/v0.1/dotjenkins.hpi
 naginator
